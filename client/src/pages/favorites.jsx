@@ -1,6 +1,6 @@
 import GameList from "@/components/GameList";
 import { getFav } from "@/helpers/manageFavorites";
-import useStore from "@/store/store";
+
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { Box, Button, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
@@ -10,18 +10,11 @@ const favorites = () => {
   const [favourites, setfavourites] = useState([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
-  const { favorites, addToFavorites, removeFromFavorites, isFavorite,initialise } =
-  useStore((state) => ({
-    favorites: state.favorites,
-    addToFavorites: state.addToFavorites,
-    removeFromFavorites: state.removeFromFavorites,
-    isFavorite: state.isFavorite,
-    initialise:state.initialise
-  }));
+ 
   useEffect(() => {
     setfavourites(getFav());
     setLoading(false);
-    console.log({favorites});
+   
   }, []);
   if (loading)
     return (

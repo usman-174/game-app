@@ -7,7 +7,7 @@ import SearchBar from "../components/SearchBar";
 import axiosInstance from "@/helpers/axiosInstance";
 import { getFav } from "@/helpers/manageFavorites";
 import Link from "next/link";
-import useStore from "../store/store";
+
 
 
 export default function Home() {
@@ -15,16 +15,9 @@ export default function Home() {
   const [games, setGames] = useState([]);
   const [_, setfavourites] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { favorites, addToFavorites, removeFromFavorites, isFavorite,initialise } =
-  useStore((state) => ({
-    favorites: state.favorites,
-    addToFavorites: state.addToFavorites,
-    removeFromFavorites: state.removeFromFavorites,
-    isFavorite: state.isFavorite,
-  }));
-
+ 
   useEffect(() => {
-    initialise()
+   
     const getGames = async (q) => {
       try {
         const { data } = await axiosInstance.get(q);
