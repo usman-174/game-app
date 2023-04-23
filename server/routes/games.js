@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { PrismaClient } from "@prisma/client";
+const { Router } = require("express");
+const { PrismaClient } = require("@prisma/client");
 
 const games = Router();
 const prisma = new PrismaClient();
@@ -7,25 +7,31 @@ const prisma = new PrismaClient();
 games.get("/games", async (_, res) => {
   try {
     const games = await prisma.game.findMany(); // Find all games in the database
-    res.json(games);
+
+    res.status(200).json(games);
   } catch (err) {
-    console.error(err);
     res.status(500).json({ message: "Game not Available" });
   }
 });
 
 games.get("/games/:id", async (req, res) => {
   const gameId = parseInt(req.params.id);
+  if (isNaN(gameId)) {
+    return res.status(400).json({ message: "Invalid game ID" });
+  }
   try {
     const game = await prisma.game.findUnique({
       where: {
         id: gameId,
       },
     });
+    if (!game) {
+      return res.status(404).json({ message: "Game not found" });
+    }
     return res.json(game);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Game not found" });
+    res.status(500).json({ message: "Internal server error" });
   }
 });
 games.get("/game", async (req, res) => {
@@ -40,7 +46,8 @@ games.get("/game", async (req, res) => {
         },
       },
     });
-
+    // important: Its okay to send empty Array
+    
     res.json(games);
   } catch (err) {
     console.error(err);
@@ -65,7 +72,6 @@ games.get("/games-top", async (req, res) => {
   }
 });
 games.post("/games", async (req, res) => {
-
   // Create the game in the database using Prisma
   try {
     const game = await prisma.game.create({
@@ -117,54 +123,53 @@ games.put("/games/:id", async (req, res) => {
   }
 });
 
-export {games}
-
+exports.games = games;
 
 /**
  * @swagger
  * components:
-*   schemas:
-*    Game:
-*      type: object
-*      properties:
-*        id:
-*          type: integer
-*          example: 1
-*        percentRecommended:
-*          type: integer
-*          example: 100
-*        numReviews:
-*          type: integer
-*          example: 41
-*        topCriticScore:
-*          type: number
-*          format: float
-*          example: 89.6470588235294
-*        tier:
-*          type: string
-*          example: "Mighty"
-*        name:
-*          type: string
-*          example: "The Stanley Parable: Ultra Deluxe"
-*      firstReleaseDate:
-*        type: string
-*        format: date-time
-*        example: "2022-04-27T00:00:00.000Z"
-*      url:
-*        type: string
-*        example: "https://opencritic.com/game/13083/the-stanley-parable-ultra-deluxe"
-*    required:
-*      - id
-*      - percentRecommended
-*      - numReviews
-*      - topCriticScore
-*      - tier
-*      - name
-*      - firstReleaseDate
-*      - url
-*
-*
- *        
+ *   schemas:
+ *    Game:
+ *      type: object
+ *      properties:
+ *        id:
+ *          type: integer
+ *          example: 1
+ *        percentRecommended:
+ *          type: integer
+ *          example: 100
+ *        numReviews:
+ *          type: integer
+ *          example: 41
+ *        topCriticScore:
+ *          type: number
+ *          format: float
+ *          example: 89.6470588235294
+ *        tier:
+ *          type: string
+ *          example: "Mighty"
+ *        name:
+ *          type: string
+ *          example: "The Stanley Parable: Ultra Deluxe"
+ *      firstReleaseDate:
+ *        type: string
+ *        format: date-time
+ *        example: "2022-04-27T00:00:00.000Z"
+ *      url:
+ *        type: string
+ *        example: "https://opencritic.com/game/13083/the-stanley-parable-ultra-deluxe"
+ *    required:
+ *      - id
+ *      - percentRecommended
+ *      - numReviews
+ *      - topCriticScore
+ *      - tier
+ *      - name
+ *      - firstReleaseDate
+ *      - url
+ *
+ *
+ *
  * paths:
  *  /games:
  *   get:
@@ -217,7 +222,7 @@ export {games}
  *    get:
  *      summary: Get games by name
  *      description: Get a list of games by name from the database
- *      tags: 
+ *      tags:
  *       - Games
  *      parameters:
  *        - in: query
@@ -237,7 +242,7 @@ export {games}
  *                  $ref: '#/components/schemas/Game'
  *        '500':
  *          description: Game not found
- * 
+ *
  *  /api/games-top:
  *   get:
  *     summary: Get top 10 games by recommendation percentage.
@@ -261,11 +266,11 @@ export {games}
  *               properties:
  *                 error:
  *                   type: string
- *     
+ *
  *  /api/games:
  *   post:
  *     summary: Create a new game
- *     tags: 
+ *     tags:
  *       - Games
  *     requestBody:
  *       description: Object containing the game data
@@ -289,8 +294,8 @@ export {games}
  *               type: object
  *               properties:
  *                 error:
- *                   type: string    
- *  
+ *                   type: string
+ *
  *  /api/games/{id}:
  *    put:
  *     summary: Update a game by ID
@@ -325,4 +330,3 @@ export {games}
  *       '500':
  *         description: Internal Server Error. Failed to update game in the database.
  */
-

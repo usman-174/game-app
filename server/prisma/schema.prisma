@@ -18,6 +18,6 @@ model Game {
   topCriticScore       Float
   tier                 String
   name                 String
-  firstReleaseDate     DateTime
+  firstReleaseDate     Int
   url                  String
 }

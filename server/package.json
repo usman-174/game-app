@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon index.js"
+    "dev": "nodemon app.js",
+    "start":"node app.js"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,7 @@
     "supertest": "^6.3.3",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^4.6.2"
-  },
+  }, 
   "devDependencies": {
     "jest": "^29.5.0",
     "nodemon": "^2.0.22"

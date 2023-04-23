@@ -4,6 +4,7 @@ import {
   InputRightElement,
   Button,
   Text,
+  IconButton,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { CloseIcon } from "@chakra-ui/icons";
@@ -19,10 +20,25 @@ function SearchBar({ setQuery }) {
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Enter Game.."
       />
+      {/* <InputRightElement>
         {search.length > 2 && <CloseIcon boxSize={"3"}  onClick={()=>{
           setSearch("")
           setQuery("")
         }}/>}
+        </InputRightElement> */}
+        <InputRightElement>
+            <IconButton
+              icon={<CloseIcon />}
+              variant="unstyled"
+              size="sm"
+              aria-label="Clear search query"
+              onClick={()=>{
+                setSearch("")
+                setQuery("")
+              }}
+              display={search.length > 2 ? "block" : "none"}
+            />
+          </InputRightElement>
 
       <InputRightElement width="4.5rem">
       

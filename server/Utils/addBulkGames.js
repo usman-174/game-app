@@ -1,3 +1,4 @@
+const prisma = require("../prisma");
 async function addGamesToModel(gameDataArray) {
     try {
       const gamePromises = gameDataArray.map((gameData) => {
@@ -8,7 +9,7 @@ async function addGamesToModel(gameDataArray) {
             topCriticScore: gameData.topCriticScore,
             tier: gameData.tier,
             name: gameData.name,
-            firstReleaseDate: new Date(gameData.firstReleaseDate),
+            firstReleaseDate:  parseInt(new Date(gameData.firstReleaseDate).getFullYear()),
             url: gameData.url,
           },
         });
@@ -23,4 +24,4 @@ async function addGamesToModel(gameDataArray) {
     }
   }
 
-  export default addGamesToModel
+  module.exports = addGamesToModel;
