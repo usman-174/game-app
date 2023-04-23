@@ -1,22 +1,36 @@
-const { Router } = require("express");
-const { PrismaClient } = require("@prisma/client");
-const Joi = require("joi");
+import { Request, Response } from "express";
+import { Router } from "express";
+import { PrismaClient } from "@prisma/client";
+interface Game {
+  id: number;
+  percentRecommended: number;
+  numReviews: number;
+  topCriticScore: number;
+  tier: string;
+  name: string;
+  firstReleaseDate: number;
+  url: string;
+} 
 
+import Joi from "joi";
 const games = Router();
 const prisma = new PrismaClient();
 
-games.get("/all-games", async (_, res) => {
+type Res = Response<{ message: string }>
+
+
+games.get("/all-games", async (_: Request, res: Response): Promise<Game[] | Res> => {
   try {
     const games = await prisma.game.findMany(); // Find all games in the database
 
-    res.status(200).json(games);
+    return res.status(200).json(games);
   } catch (err) {
-    res.status(500).json({ message: "Game not Available" });
+    return res.status(500).json({ message: "Game not Available" });
   }
 });
 
 // Get game by ID
-games.get("/game/:id", async (req, res) => {
+games.get("/game/:id", async (req: Request, res: Response): Promise<Game | Res> => {
   // Parse game ID from request params
   const gameId = parseInt(req.params.id);
 
@@ -42,14 +56,14 @@ games.get("/game/:id", async (req, res) => {
     return res.json(game);
   } catch (err) {
     // If there was an error while querying the database, return a 500 error
-    console.error(err);
-    res.status(500).json({ message: "Internal server error" });
+    return res.status(500).json({ message: "Internal server error" });
   }
+
 });
 // Route to search games by name
-games.get("/games", async (req, res) => {
+games.get("/games", async (req: Request, res: Response): Promise<Game[] | Res> => {
   // Get the value of the "q" query parameter
-  const name = req.query.q;
+  const name = String(req.query.q);
   try {
     // Query the database for games that match the search criteria
     const games = await prisma.game.findMany({
@@ -63,12 +77,12 @@ games.get("/games", async (req, res) => {
     });
 
     // Send the search results as the response
-    res.status(200).json(games);
+    return res.status(200).json(games);
   } catch (err) {
-    res.status(500).json({ message: "Game not found" });
+    return res.status(500).json({ message: "Game not found" });
   }
 });
-games.get("/games-top", async (req, res) => {
+games.get("/games-top", async (_: Request, res: Response): Promise<Game[] | Res> => {
   try {
     // Finding Games by Recommendation
     const games = await prisma.game.findMany({
@@ -79,13 +93,13 @@ games.get("/games-top", async (req, res) => {
     });
 
     // Return the created game as the response
-    res.json(games);
+    return res.json(games);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Game not found" });
+    return res.status(500).json({ error: "Game not found" });
   }
 });
-games.post("/add-game", async (req, res) => {
+games.post("/add-game", async (req: Request, res: Response): Promise<Game | Res> => {
   //In put validation
   const schema = Joi.object({
     percentRecommended: Joi.number().min(0).max(100).required(),
@@ -93,11 +107,11 @@ games.post("/add-game", async (req, res) => {
     topCriticScore: Joi.number().min(0).max(100).required(),
     tier: Joi.string().required(),
     name: Joi.string().required(),
-    firstReleaseDate: Joi.date().required(),
+    firstReleaseDate: Joi.number().required(),
     url: Joi.string().required(),
   });
   // Validate the input
-  const { error } = schema.validate(req.body);
+  const { error, value } = schema.validate(req.body);
   if (error) {
     // Return a 400 Bad Request response with the validation error message
     return res
@@ -109,32 +123,32 @@ games.post("/add-game", async (req, res) => {
   try {
     const game = await prisma.game.create({
       data: {
-        percentRecommended: req.body.percentRecommended,
-        numReviews: req.body.numReviews,
-        topCriticScore: req.body.topCriticScore,
-        tier: req.body.tier,
-        name: req.body.name,
-        firstReleaseDate: req.body.firstReleaseDate,
-        url: req.body.url,
+        percentRecommended: value.percentRecommended,
+        numReviews: value.numReviews,
+        topCriticScore: value.topCriticScore,
+        tier: value.tier,
+        name: value.name,
+        firstReleaseDate: new Date(value.firstReleaseDate).getFullYear(),
+        url: value.url,
       },
     });
 
     // Return the created game as the response
-    res.json(game);
+    return res.json(game);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Failed to create game" });
+    return res.status(500).json({ error: "Failed to create game" });
   }
 });
 
 // PUT /games/:id
-games.put("/update-game/:id", async (req, res) => {
+games.put("/update-game/:id", async (req: Request, res: Response): Promise<Game | Res> => {
   const gameId = parseInt(req.params.id);
 
   // Update the game in the database using Prisma
   try {
     // Build the update object based on non-empty fields in the req.body
-    const updateObject = {};
+    const updateObject: Record<string, unknown> = {};
     for (const key in req.body) {
       if (req.body[key]) {
         updateObject[key] = req.body[key];
@@ -149,14 +163,12 @@ games.put("/update-game/:id", async (req, res) => {
     });
 
     // Return the updated game as the response
-    res.json(updatedGame);
+    return res.json(updatedGame);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Failed to update game" });
+    return res.status(500).json({ error: "Failed to update game" });
   }
 });
-
-exports.games = games;
 
 /**
  * @swagger
@@ -200,9 +212,6 @@ exports.games = games;
  *      - name
  *      - firstReleaseDate
  *      - url
- *
- *
- *
  * paths:
  *  /api/all-games:
  *   get:
@@ -363,3 +372,7 @@ exports.games = games;
  *       '500':
  *         description: Internal Server Error. Failed to update game in the database.
  */
+
+export {
+  games
+}

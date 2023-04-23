@@ -2,7 +2,15 @@ import { Box, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 
 import { Link } from "@chakra-ui/next-js";
 import ShowFavButton from "./ShowFavButton";
-const GameList = ({ games, setfavourites }) => {
+import { Game } from "@/types/Game";
+import { Dispatch, SetStateAction } from "react";
+type Props = {
+  games: Game[]
+  setfavourites: Dispatch<SetStateAction<Game[]>>
+
+  }
+
+const GameList = ({ games, setfavourites }: Props) => {
   return (
     <Grid
       templateColumns={{
@@ -11,7 +19,7 @@ const GameList = ({ games, setfavourites }) => {
         xl: "repeat(3, 1fr)",
       }}
       gap={6}
-      mt={6}
+      mt={6} 
     >
       {games?.map((game) => (
         <GridItem key={game.id}>

@@ -1,10 +1,11 @@
 import axiosInstance from "@/helpers/axiosInstance";
-import { Box, Flex, Heading,  Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Link } from "@chakra-ui/next-js";
+import { Game } from "@/types/Game";
 
-const Sidebar = () => {
-  const [topGames, setTopGames] = useState([]);
+const Sidebar = (): JSX.Element | null => {
+  const [topGames, setTopGames] = useState<Game[]>([]);
 
   useEffect(() => {
     const getTopGames = async () => {
@@ -31,7 +32,7 @@ const Sidebar = () => {
         overflowX={{ base: "scroll", md: "hidden" }}
         direction={{ base: "row", md: "column" }}
         gap="2"
-        spacing={4}
+
         align="flex-start"
       >
         {topGames.map((game) => (

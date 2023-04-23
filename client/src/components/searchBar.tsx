@@ -5,8 +5,11 @@ import {
   InputRightElement
 } from "@chakra-ui/react";
 import { useState } from "react";
-function SearchBar({ setQuery }) {
-  const [search, setSearch] = useState("");
+type Props = {
+  setQuery : (x:string)=>{}
+}
+function SearchBar({ setQuery }:Props) {
+  const [search, setSearch] = useState<string>("");
   const handleClick = () => setQuery(search);
 
   return (

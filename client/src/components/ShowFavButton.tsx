@@ -4,16 +4,22 @@ import {
   isGameInFavorites,
   removeGameFromFavorites,
 } from "@/helpers/manageFavorites";
+import { Game } from "@/types/Game";
 import { Button } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 const ADD_TO_FAV_LABEL = "Add to favorites";
 const REMOVE_FROM_FAV_LABEL = "Remove from favorites";
 const BLUE_COLOR_SCHEME = "blue";
 const RED_COLOR_SCHEME = "red";
 
-const ShowFavButton = ({ game, setfavourites }) => {
-  const [exists, setExists] = useState(isGameInFavorites(game));
+type Props = {
+  game: Game
+  setfavourites: Dispatch<SetStateAction<Game[]>>
+}
+
+const ShowFavButton = ({ game, setfavourites }: Props) => {
+  const [exists, setExists] = useState<boolean>(isGameInFavorites(game));
 
   const handleAddToFav = () => {
     addGameToFavorites(game);

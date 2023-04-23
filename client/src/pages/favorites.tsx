@@ -1,14 +1,15 @@
 import GameList from "@/components/GameList";
 import { getFavoriteGames } from "@/helpers/manageFavorites";
+import { Game } from "@/types/Game";
 
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { Box, Button, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-const favorites = () => {
-  const [favourites, setfavourites] = useState([]);
-  const [loading, setLoading] = useState(true);
+const favorites = () : JSX.Element => {
+  const [favourites, setfavourites] = useState<Game[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   const router = useRouter();
 
   useEffect(() => {
