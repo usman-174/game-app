@@ -4,10 +4,10 @@ import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 
+import Sidebar from "@/components/SideBar";
 import axiosInstance from "@/helpers/axiosInstance";
 import { getFavoriteGames } from "@/helpers/manageFavorites";
 import Link from "next/link";
-import Sidebar from "@/components/SideBar";
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -27,7 +27,7 @@ export default function Home() {
     };
     let q = "/all-games";
     if (query.trim().length) {
-      q = "game?q=" + query;
+      q = "games?q=" + query;
     }
     getGames(q);
     setfavourites(getFavoriteGames());
@@ -41,6 +41,7 @@ export default function Home() {
 
   return (
     <>
+   
       <Box m={10}>
         <SearchBar setQuery={setQuery} />
 

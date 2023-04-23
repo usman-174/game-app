@@ -1,4 +1,5 @@
 const prisma = require("../prisma");
+const data = require("../data.json");
 async function addGamesToModel(gameDataArray) {
     try {
       const gamePromises = gameDataArray.map((gameData) => {
@@ -24,4 +25,4 @@ async function addGamesToModel(gameDataArray) {
     }
   }
 
-  module.exports = addGamesToModel;
+  addGamesToModel(data)

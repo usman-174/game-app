@@ -4,9 +4,12 @@ const cors = require("cors");
 const swaggerUi = require("swagger-ui-express");
 const swaggerJSDoc = require("swagger-jsdoc");
 const { games: gamesRouter } = require("./routes/games.js");
+
+
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();
 }
+
 const app = express();
 const port = process.env.PORT || "4000";
 
@@ -44,7 +47,7 @@ app.get("/", (_, res) => {
   });
 });
 
-app.use("/api/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use("/api", gamesRouter);
 
 app.use((_, res) => {
@@ -53,6 +56,8 @@ app.use((_, res) => {
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
+  
+  
 });
 
 process.on("uncaughtException", (err) => {

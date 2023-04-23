@@ -1,950 +1,802 @@
 [
   {
-    "images": {
-      "banner": {
-        "og": "game/4903/o/8L69Vqvf.jpg",
-        "sm": "game/4903/VK4BC9gB.jpg"
-      }
-    },
     "percentRecommended": 96.15384615384616,
     "numReviews": 187,
     "topCriticScore": 89.61267605633803,
     "tier": "Mighty",
     "name": "Monster Hunter World",
-    "Platforms": [
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2018-01-26T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2018-01-26T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2018-08-09T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2020-11-10T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 4903,
     "firstReleaseDate": "2018-01-26T00:00:00.000Z",
     "url": "https://opencritic.com/game/4903/monster-hunter-world"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/4002/o/F7I02fQd.jpg",
-        "sm": "game/4002/Xcjz43Bf.jpg"
-      }
-    },
     "percentRecommended": 98.46153846153847,
     "numReviews": 67,
     "topCriticScore": 89.60526315789474,
     "tier": "Mighty",
     "name": "Hollow Knight",
-    "Platforms": [
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2017-02-24T00:00:00.000Z"
-      },
-      {
-        "id": 32,
-        "name": "Nintendo Switch",
-        "shortName": "Switch",
-        "releaseDate": "2018-06-12T00:00:00.000Z"
-      },
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2018-09-25T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2018-09-25T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2020-11-10T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 4002,
     "firstReleaseDate": "2017-02-24T00:00:00.000Z",
     "url": "https://opencritic.com/game/4002/hollow-knight"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/6863/o/Jo3voKQt.jpg",
-        "sm": "game/6863/0saaRGOa.jpg"
-      }
-    },
     "percentRecommended": 96.80851063829788,
     "numReviews": 99,
     "topCriticScore": 89.5657894736842,
     "tier": "Mighty",
     "name": "Tetris Effect",
-    "Platforms": [
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2018-11-09T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2019-07-23T00:00:00.000Z"
-      }
-    ],
     "id": 6863,
     "firstReleaseDate": "2018-11-09T00:00:00.000Z",
     "url": "https://opencritic.com/game/6863/tetris-effect"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/6731/o/VdoRb4ph.jpg",
-        "sm": "game/6731/zbychj7J.jpg"
-      }
-    },
     "percentRecommended": 100,
     "numReviews": 11,
     "topCriticScore": 89.5,
     "tier": "Mighty",
     "name": "Mark of the Ninja: Remastered",
-    "Platforms": [
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2018-10-09T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2018-10-09T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2018-10-09T00:00:00.000Z"
-      },
-      {
-        "id": 32,
-        "name": "Nintendo Switch",
-        "shortName": "Switch",
-        "releaseDate": "2018-10-09T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2020-11-10T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 6731,
     "firstReleaseDate": "2018-10-09T00:00:00.000Z",
     "url": "https://opencritic.com/game/6731/mark-of-the-ninja-remastered"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/2242/o/Pglm7O8n.jpg",
-        "sm": "game/2242/2MpaHbaw.jpg"
-      }
-    },
     "percentRecommended": 98.55072463768117,
     "numReviews": 70,
     "topCriticScore": 89.4,
     "tier": "Mighty",
     "name": "Stardew Valley",
-    "Platforms": [
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2016-12-14T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2016-12-14T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2016-02-26T00:00:00.000Z"
-      },
-      {
-        "id": 32,
-        "name": "Nintendo Switch",
-        "shortName": "Switch",
-        "releaseDate": "2017-10-05T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2020-11-10T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 2242,
     "firstReleaseDate": "2016-02-26T00:00:00.000Z",
     "url": "https://opencritic.com/game/2242/stardew-valley"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/1726/o/piBZwccc.jpg",
-        "sm": "game/1726/xBBhbs9B.jpg"
-      }
-    },
     "percentRecommended": 96.07843137254902,
     "numReviews": 55,
     "topCriticScore": 89.38235294117646,
     "tier": "Mighty",
     "name": "Return of the Obra Dinn",
-    "Platforms": [
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2018-10-18T00:00:00.000Z"
-      },
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2019-10-18T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2019-10-18T00:00:00.000Z"
-      },
-      {
-        "id": 32,
-        "name": "Nintendo Switch",
-        "shortName": "Switch",
-        "releaseDate": "2019-10-18T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2020-11-10T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 1726,
     "firstReleaseDate": "2018-10-18T00:00:00.000Z",
     "url": "https://opencritic.com/game/1726/return-of-the-obra-dinn"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/7836/o/BySEDX3R.jpg",
-        "sm": "game/7836/zXBqNw1V.jpg"
-      }
-    },
     "percentRecommended": 93.87755102040816,
     "numReviews": 51,
     "topCriticScore": 89.38095238095238,
     "tier": "Mighty",
     "name": "Final Fantasy XIV: Shadowbringers",
-    "Platforms": [
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2019-07-02T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2019-07-02T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 7836,
     "firstReleaseDate": "2019-07-02T00:00:00.000Z",
     "url": "https://opencritic.com/game/7836/final-fantasy-xiv-shadowbringers"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/3540/o/k5HISW3O.jpg",
-        "sm": "game/3540/C6AUonTS.jpg"
-      }
-    },
     "percentRecommended": 92.76315789473685,
     "numReviews": 157,
     "topCriticScore": 89.36206896551724,
     "tier": "Mighty",
     "name": "Nier: Automata",
-    "Platforms": [
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2017-03-07T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2017-03-17T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 3540,
     "firstReleaseDate": "2017-03-07T00:00:00.000Z",
     "url": "https://opencritic.com/game/3540/nier-automata"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/2862/o/nAekV7VB.jpg",
-        "sm": "game/2862/5DGe97q1.jpg"
-      }
-    },
     "percentRecommended": 94.11764705882352,
     "numReviews": 173,
     "topCriticScore": 89.34188034188034,
     "tier": "Mighty",
     "name": "Horizon Zero Dawn",
-    "Platforms": [
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2017-02-28T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 2862,
     "firstReleaseDate": "2017-02-28T00:00:00.000Z",
     "url": "https://opencritic.com/game/2862/horizon-zero-dawn"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/14102/o/JRkbFrBg.jpg",
-        "sm": "game/14102/L1w7659s.jpg"
-      }
-    },
     "percentRecommended": 96.07843137254902,
     "numReviews": 51,
     "topCriticScore": 89.33823529411765,
     "tier": "Mighty",
-    "Platforms": [
-      {
-        "id": 32,
-        "name": "Nintendo Switch",
-        "shortName": "Switch",
-        "releaseDate": "2022-12-08T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2022-12-08T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2022-12-08T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2022-12-08T00:00:00.000Z"
-      },
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2022-12-08T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2022-12-08T00:00:00.000Z"
-      }
-    ],
     "name": "Chained Echoes",
     "id": 14102,
     "firstReleaseDate": "2022-12-08T00:00:00.000Z",
     "url": "https://opencritic.com/game/14102/chained-echoes"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/224/o/hyah4bMb.jpg",
-        "sm": "game/224/BtBKDRpf.jpg"
-      }
-    },
     "percentRecommended": 98.4375,
     "numReviews": 66,
     "topCriticScore": 89.25806451612904,
     "tier": "Mighty",
     "name": "Diablo III: Ultimate Evil Edition",
-    "Platforms": [
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2014-08-18T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2014-08-18T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2020-11-10T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 224,
     "firstReleaseDate": "2014-08-18T00:00:00.000Z",
     "url": "https://opencritic.com/game/224/diablo-iii-ultimate-evil-edition"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/7410/o/sRpxCbxO.jpg",
-        "sm": "game/7410/tLd2Ql5G.jpg"
-      }
-    },
     "percentRecommended": 95.95959595959596,
     "numReviews": 203,
     "topCriticScore": 89.25,
     "tier": "Mighty",
     "name": "DOOM Eternal",
-    "Platforms": [
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2020-03-20T00:00:00.000Z"
-      },
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2020-03-20T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2020-03-20T00:00:00.000Z"
-      },
-      {
-        "id": 32,
-        "name": "Nintendo Switch",
-        "shortName": "Switch",
-        "releaseDate": "2020-12-31T00:00:00.000Z"
-      },
-      {
-        "id": 38,
-        "name": "Google Stadia",
-        "shortName": "Stadia",
-        "releaseDate": "2020-03-20T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2020-11-10T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 7410,
     "firstReleaseDate": "2020-03-20T00:00:00.000Z",
     "url": "https://opencritic.com/game/7410/doom-eternal"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/11148/o/MNz5HEyZ.jpg",
-        "sm": "game/11148/rcYkhRSy.jpg"
-      }
-    },
     "percentRecommended": 94.28571428571428,
     "numReviews": 72,
     "topCriticScore": 89.23529411764706,
     "tier": "Mighty",
-    "Platforms": [
-      {
-        "id": 32,
-        "name": "Nintendo Switch",
-        "shortName": "Switch",
-        "releaseDate": "2021-01-01T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2021-03-30T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2021-03-30T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2021-12-31T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2021-12-31T00:00:00.000Z"
-      },
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2021-03-30T00:00:00.000Z"
-      },
-      {
-        "id": 38,
-        "name": "Google Stadia",
-        "shortName": "Stadia",
-        "releaseDate": "2021-03-30T00:00:00.000Z"
-      }
-    ],
     "name": "Disco Elysium: The Final Cut",
     "id": 11148,
     "firstReleaseDate": "2021-01-01T00:00:00.000Z",
     "url": "https://opencritic.com/game/11148/disco-elysium-the-final-cut"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/1827/o/hm2hsfXZ.jpg",
-        "sm": "game/1827/0AmJ0B5H.jpg"
-      }
-    },
     "percentRecommended": 98.18181818181819,
     "numReviews": 61,
     "topCriticScore": 89.21153846153847,
     "tier": "Mighty",
     "name": "The Witcher 3: Wild Hunt - Hearts of Stone",
-    "Platforms": [
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2015-10-12T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2015-10-12T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2015-10-12T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2020-11-10T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 1827,
     "firstReleaseDate": "2015-10-12T00:00:00.000Z",
     "url": "https://opencritic.com/game/1827/the-witcher-3-wild-hunt-hearts-of-stone"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/496/o/OZmuNyb2.jpg",
-        "sm": "game/496/tJKu2pNt.jpg"
-      }
-    },
     "percentRecommended": 97.01492537313433,
     "numReviews": 69,
     "topCriticScore": 89.1639344262295,
     "tier": "Mighty",
     "name": "Pillars of Eternity",
-    "Platforms": [
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2017-08-29T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2017-08-29T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2015-03-26T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2020-11-10T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 496,
     "firstReleaseDate": "2015-03-26T00:00:00.000Z",
     "url": "https://opencritic.com/game/496/pillars-of-eternity"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/9440/o/OmU9PQDM.jpg",
-        "sm": "game/9440/q6OtR4hV.jpg"
-      }
-    },
     "percentRecommended": 96.4824120603015,
     "numReviews": 203,
     "topCriticScore": 88.91472868217055,
     "tier": "Mighty",
     "name": "Tony Hawk's Pro Skater 1 + 2",
-    "Platforms": [
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2020-09-04T00:00:00.000Z"
-      },
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2020-09-04T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2020-09-04T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2020-11-10T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 9440,
     "firstReleaseDate": "2020-09-04T00:00:00.000Z",
     "url": "https://opencritic.com/game/9440/tony-hawks-pro-skater-1-2"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/33/o/I9uHDgBn.jpg",
-        "sm": "game/33/RbFMuwMU.jpg"
-      }
-    },
     "percentRecommended": 89.79591836734694,
     "numReviews": 100,
     "topCriticScore": 88.90217391304348,
     "tier": "Mighty",
     "name": "Shovel Knight",
-    "Platforms": [
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2015-04-20T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2015-04-20T00:00:00.000Z"
-      },
-      {
-        "id": 26,
-        "name": "Wii U",
-        "shortName": "Wii-U",
-        "releaseDate": "2014-06-25T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2014-06-25T00:00:00.000Z"
-      },
-      {
-        "id": 36,
-        "name": "Nintendo 3DS",
-        "shortName": "3DS",
-        "releaseDate": "2014-06-24T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2020-11-10T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 33,
     "firstReleaseDate": "2014-06-24T00:00:00.000Z",
     "url": "https://opencritic.com/game/33/shovel-knight"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/1947/o/VIdCEE9I.jpg",
-        "sm": "game/1947/FrJZIKEp.jpg"
-      }
-    },
     "percentRecommended": 94.11764705882352,
     "numReviews": 35,
     "topCriticScore": 88.8529411764706,
     "tier": "Mighty",
     "name": "Tales from the Borderlands: Episode Five - The Vault of the Traveler",
-    "Platforms": [
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2015-10-20T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2015-10-20T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2015-10-20T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2020-11-10T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 1947,
     "firstReleaseDate": "2015-10-20T00:00:00.000Z",
     "url": "https://opencritic.com/game/1947/tales-from-the-borderlands-episode-five-the-vault-of-the-traveler"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/6386/o/DPUyj8fi.jpg",
-        "sm": "game/6386/mujkaBah.jpg"
-      }
-    },
     "percentRecommended": 95.1048951048951,
     "numReviews": 148,
     "topCriticScore": 88.83673469387755,
     "tier": "Mighty",
     "name": "Dead Cells",
-    "Platforms": [
-      {
-        "id": 6,
-        "name": "PlayStation 4",
-        "shortName": "PS4",
-        "releaseDate": "2018-08-07T00:00:00.000Z"
-      },
-      {
-        "id": 7,
-        "name": "Xbox One",
-        "shortName": "XB1",
-        "releaseDate": "2018-08-07T00:00:00.000Z"
-      },
-      {
-        "id": 27,
-        "name": "PC",
-        "shortName": "PC",
-        "releaseDate": "2018-08-07T00:00:00.000Z"
-      },
-      {
-        "id": 32,
-        "name": "Nintendo Switch",
-        "shortName": "Switch",
-        "releaseDate": "2018-08-07T00:00:00.000Z"
-      },
-      {
-        "id": 2,
-        "name": "Xbox Series X/S",
-        "shortName": "XBXS",
-        "releaseDate": "2020-11-10T00:00:00.000Z"
-      },
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2020-11-12T00:00:00.000Z"
-      }
-    ],
     "id": 6386,
     "firstReleaseDate": "2018-08-07T00:00:00.000Z",
     "url": "https://opencritic.com/game/6386/dead-cells"
   },
   {
-    "images": {
-      "banner": {
-        "og": "game/10994/o/OHBxBh1q.jpg",
-        "sm": "game/10994/SiHvgm9d.jpg"
-      }
-    },
     "percentRecommended": 96.7948717948718,
     "numReviews": 161,
     "topCriticScore": 88.81720430107526,
     "tier": "Mighty",
     "name": "Ratchet & Clank: Rift Apart",
-    "Platforms": [
-      {
-        "id": 3,
-        "name": "PlayStation 5",
-        "shortName": "PS5",
-        "releaseDate": "2021-06-11T00:00:00.000Z"
-      }
-    ],
     "id": 10994,
     "firstReleaseDate": "2021-06-11T00:00:00.000Z",
     "url": "https://opencritic.com/game/10994/ratchet-clank-rift-apart"
+  },
+  {
+    "percentRecommended": 93.80952380952381,
+    "numReviews": 217,
+    "topCriticScore": 95.50617283950618,
+    "tier": "Mighty",
+    "name": "Red Dead Redemption 2",
+    "id": 3717,
+    "firstReleaseDate": "2018-10-26T00:00:00.000Z",
+    "url": "https://opencritic.com/game/3717/red-dead-redemption-2"
+  },
+  {
+    "percentRecommended": 97.89473684210527,
+    "numReviews": 200,
+    "topCriticScore": 95.28333333333333,
+    "tier": "Mighty",
+    "name": "Elden Ring",
+    "id": 12090,
+    "firstReleaseDate": "2022-02-25T00:00:00.000Z",
+    "url": "https://opencritic.com/game/12090/elden-ring"
+  },
+  {
+    "percentRecommended": 97.53086419753086,
+    "numReviews": 251,
+    "topCriticScore": 94.30285714285715,
+    "tier": "Mighty",
+    "name": "God of War",
+    "id": 5434,
+    "firstReleaseDate": "2018-04-20T00:00:00.000Z",
+    "url": "https://opencritic.com/game/5434/god-of-war"
+  },
+  {
+    "percentRecommended": 98.55072463768117,
+    "numReviews": 69,
+    "topCriticScore": 94.24193548387096,
+    "tier": "Mighty",
+    "name": "The Last of Us Remastered",
+    "id": 234,
+    "firstReleaseDate": "2014-07-28T00:00:00.000Z",
+    "url": "https://opencritic.com/game/234/the-last-of-us-remastered"
+  },
+  {
+    "percentRecommended": 97.53086419753086,
+    "numReviews": 164,
+    "topCriticScore": 94.15686274509804,
+    "tier": "Mighty",
+    "name": "Persona 5 Royal",
+    "id": 8785,
+    "firstReleaseDate": "2020-03-31T00:00:00.000Z",
+    "url": "https://opencritic.com/game/8785/persona-5-royal"
+  },
+  {
+    "percentRecommended": 98.49624060150376,
+    "numReviews": 137,
+    "topCriticScore": 94.03921568627452,
+    "tier": "Mighty",
+    "name": "Persona 5",
+    "id": 1537,
+    "firstReleaseDate": "2017-04-04T00:00:00.000Z",
+    "url": "https://opencritic.com/game/1537/persona-5"
+  },
+  {
+    "percentRecommended": 95.65217391304348,
+    "numReviews": 46,
+    "topCriticScore": 93.4186046511628,
+    "tier": "Mighty",
+    "name": "Journey",
+    "id": 1436,
+    "firstReleaseDate": "2015-07-21T00:00:00.000Z",
+    "url": "https://opencritic.com/game/1436/journey"
+  },
+  {
+    "percentRecommended": 97.26027397260275,
+    "numReviews": 75,
+    "topCriticScore": 93.33898305084746,
+    "tier": "Mighty",
+    "name": "Undertale",
+    "id": 1907,
+    "firstReleaseDate": "2015-09-15T00:00:00.000Z",
+    "url": "https://opencritic.com/game/1907/undertale"
+  },
+  {
+    "percentRecommended": -1,
+    "numReviews": 4,
+    "topCriticScore": 93.33333333333333,
+    "tier": "Mighty",
+    "name": "Dead Cells: The Queen & the Sea",
+    "id": 12550,
+    "firstReleaseDate": "2022-01-06T00:00:00.000Z",
+    "url": "https://opencritic.com/game/12550/dead-cells-the-queen-the-sea"
+  },
+  {
+    "percentRecommended": 97.79005524861878,
+    "numReviews": 187,
+    "topCriticScore": 93.23584905660377,
+    "tier": "Mighty",
+    "name": "God of War Ragnarök",
+    "id": 12919,
+    "firstReleaseDate": "2022-11-09T00:00:00.000Z",
+    "url": "https://opencritic.com/game/12919/god-of-war-ragnar-k"
+  },
+  {
+    "percentRecommended": 94.41624365482234,
+    "numReviews": 203,
+    "topCriticScore": 92.81981981981981,
+    "tier": "Mighty",
+    "name": "The Last of Us Part II",
+    "id": 8351,
+    "firstReleaseDate": "2020-06-19T00:00:00.000Z",
+    "url": "https://opencritic.com/game/8351/the-last-of-us-part-ii"
+  },
+  {
+    "percentRecommended": 100,
+    "numReviews": 48,
+    "topCriticScore": 92.73529411764706,
+    "tier": "Mighty",
+    "name": "Final Fantasy XIV: Endwalker",
+    "id": 11626,
+    "firstReleaseDate": "2021-12-07T00:00:00.000Z",
+    "url": "https://opencritic.com/game/11626/final-fantasy-xiv-endwalker"
+  },
+  {
+    "percentRecommended": 97.16312056737588,
+    "numReviews": 147,
+    "topCriticScore": 92.7,
+    "tier": "Mighty",
+    "name": "Uncharted 4: A Thief's End",
+    "id": 1538,
+    "firstReleaseDate": "2016-05-10T00:00:00.000Z",
+    "url": "https://opencritic.com/game/1538/uncharted-4-a-thiefs-end"
+  },
+  {
+    "percentRecommended": 95.18072289156626,
+    "numReviews": 176,
+    "topCriticScore": 92.5912408759124,
+    "tier": "Mighty",
+    "name": "The Witcher 3: Wild Hunt",
+    "id": 463,
+    "firstReleaseDate": "2015-05-19T00:00:00.000Z",
+    "url": "https://opencritic.com/game/463/the-witcher-3-wild-hunt"
+  },
+  {
+    "percentRecommended": 99.11504424778761,
+    "numReviews": 119,
+    "topCriticScore": 92.55102040816327,
+    "tier": "Mighty",
+    "name": "Metal Gear Solid V: The Phantom Pain",
+    "id": 1887,
+    "firstReleaseDate": "2015-09-01T00:00:00.000Z",
+    "url": "https://opencritic.com/game/1887/metal-gear-solid-v-the-phantom-pain"
+  },
+  {
+    "percentRecommended": 98.57142857142858,
+    "numReviews": 78,
+    "topCriticScore": 92.40625,
+    "tier": "Mighty",
+    "name": "The Witcher 3: Wild Hunt - Blood and Wine",
+    "id": 2704,
+    "firstReleaseDate": "2016-05-30T00:00:00.000Z",
+    "url": "https://opencritic.com/game/2704/the-witcher-3-wild-hunt-blood-and-wine"
+  },
+  {
+    "percentRecommended": 91.6030534351145,
+    "numReviews": 138,
+    "topCriticScore": 92.30833333333334,
+    "tier": "Mighty",
+    "name": "Grand Theft Auto V",
+    "id": 163,
+    "firstReleaseDate": "2014-11-18T00:00:00.000Z",
+    "url": "https://opencritic.com/game/163/grand-theft-auto-v"
+  },
+  {
+    "percentRecommended": 96.92307692307692,
+    "numReviews": 204,
+    "topCriticScore": 92.05839416058394,
+    "tier": "Mighty",
+    "name": "Resident Evil 2",
+    "id": 6848,
+    "firstReleaseDate": "2019-01-25T00:00:00.000Z",
+    "url": "https://opencritic.com/game/6848/resident-evil-2"
+  },
+  {
+    "percentRecommended": 97.57575757575758,
+    "numReviews": 173,
+    "topCriticScore": 92.0576923076923,
+    "tier": "Mighty",
+    "name": "Resident Evil 4 (2023 Remake)",
+    "id": 14200,
+    "firstReleaseDate": "2023-03-24T00:00:00.000Z",
+    "url": "https://opencritic.com/game/14200/resident-evil-4-2023-remake-"
+  },
+  {
+    "percentRecommended": 98.71794871794873,
+    "numReviews": 78,
+    "topCriticScore": 91.84615384615384,
+    "tier": "Mighty",
+    "name": "DRAGON QUEST XI S: Echoes of an Elusive Age - Definitive Edition",
+    "id": 8342,
+    "firstReleaseDate": "2019-09-27T00:00:00.000Z",
+    "url": "https://opencritic.com/game/8342/dragon-quest-xi-s-echoes-of-an-elusive-age-definitive-edition"
+  },
+  {
+    "percentRecommended": 94.52054794520548,
+    "numReviews": 73,
+    "topCriticScore": 91.453125,
+    "tier": "Mighty",
+    "name": "Divinity: Original Sin 2 - Definitive Edition",
+    "id": 6529,
+    "firstReleaseDate": "2018-08-30T00:00:00.000Z",
+    "url": "https://opencritic.com/game/6529/divinity-original-sin-2-definitive-edition"
+  },
+  {
+    "percentRecommended": 100,
+    "numReviews": 11,
+    "topCriticScore": 91.33333333333333,
+    "tier": "Mighty",
+    "name": "NieR: Automata Game of the YoRHa Edition",
+    "id": 7334,
+    "firstReleaseDate": "2019-02-26T00:00:00.000Z",
+    "url": "https://opencritic.com/game/7334/nier-automata-game-of-the-yorha-edition"
+  },
+  {
+    "percentRecommended": 99.05660377358491,
+    "numReviews": 109,
+    "topCriticScore": 91.0618556701031,
+    "tier": "Mighty",
+    "name": "Bloodborne",
+    "id": 76,
+    "firstReleaseDate": "2015-03-24T00:00:00.000Z",
+    "url": "https://opencritic.com/game/76/bloodborne"
+  },
+  {
+    "percentRecommended": 94.44444444444444,
+    "numReviews": 167,
+    "topCriticScore": 91.01639344262296,
+    "tier": "Mighty",
+    "name": "INSIDE",
+    "id": 2848,
+    "firstReleaseDate": "2016-06-29T00:00:00.000Z",
+    "url": "https://opencritic.com/game/2848/inside"
+  },
+  {
+    "percentRecommended": 95.52238805970148,
+    "numReviews": 138,
+    "topCriticScore": 90.31481481481481,
+    "tier": "Mighty",
+    "name": "Overwatch",
+    "id": 1673,
+    "firstReleaseDate": "2016-05-24T00:00:00.000Z",
+    "url": "https://opencritic.com/game/1673/overwatch"
+  },
+  {
+    "percentRecommended": 94.66666666666667,
+    "numReviews": 76,
+    "topCriticScore": 90.16197183098592,
+    "tier": "Mighty",
+    "name": "Rayman Legends",
+    "id": 288,
+    "firstReleaseDate": "2013-09-03T00:00:00.000Z",
+    "url": "https://opencritic.com/game/288/rayman-legends"
+  },
+  {
+    "percentRecommended": 96.29629629629629,
+    "numReviews": 110,
+    "topCriticScore": 90.15789473684211,
+    "tier": "Mighty",
+    "name": "Dreams",
+    "id": 8786,
+    "firstReleaseDate": "2020-02-14T00:00:00.000Z",
+    "url": "https://opencritic.com/game/8786/dreams"
+  },
+  {
+    "percentRecommended": 96.42857142857143,
+    "numReviews": 174,
+    "topCriticScore": 89.82758620689656,
+    "tier": "Mighty",
+    "name": "Sekiro: Shadows Die Twice",
+    "id": 6630,
+    "firstReleaseDate": "2019-03-22T00:00:00.000Z",
+    "url": "https://opencritic.com/game/6630/sekiro-shadows-die-twice"
+  },
+  {
+    "percentRecommended": 84.0909090909091,
+    "numReviews": 44,
+    "topCriticScore": 89.73809523809524,
+    "tier": "Mighty",
+    "name": "Minecraft",
+    "id": 194,
+    "firstReleaseDate": "2017-09-20T00:00:00.000Z",
+    "url": "https://opencritic.com/game/194/minecraft"
+  },
+  {
+    "percentRecommended": 96.42857142857143,
+    "numReviews": 114,
+    "topCriticScore": 89.69072164948453,
+    "tier": "Mighty",
+    "name": "Monster Hunter World: Iceborne",
+    "id": 7898,
+    "firstReleaseDate": "2019-09-06T00:00:00.000Z",
+    "url": "https://opencritic.com/game/7898/monster-hunter-world-iceborne"
+  },
+  {
+    "percentRecommended": 93.67088607594937,
+    "numReviews": 165,
+    "topCriticScore": 89.64963503649635,
+    "tier": "Mighty",
+    "name": "Dark Souls III",
+    "id": 1520,
+    "firstReleaseDate": "2016-04-12T00:00:00.000Z",
+    "url": "https://opencritic.com/game/1520/dark-souls-iii"
+  },
+  {
+    "percentRecommended": 100,
+    "numReviews": 41,
+    "topCriticScore": 89.6470588235294,
+    "tier": "Mighty",
+    "name": "The Stanley Parable: Ultra Deluxe",
+    "id": 13083,
+    "firstReleaseDate": "2022-04-27T00:00:00.000Z",
+    "url": "https://opencritic.com/game/13083/the-stanley-parable-ultra-deluxe"
+  },
+  {
+    "percentRecommended": 96.15384615384616,
+    "numReviews": 187,
+    "topCriticScore": 89.61267605633803,
+    "tier": "Mighty",
+    "name": "Monster Hunter World",
+    "id": 4903,
+    "firstReleaseDate": "2018-01-26T00:00:00.000Z",
+    "url": "https://opencritic.com/game/4903/monster-hunter-world"
+  },
+  {
+    "percentRecommended": 98.46153846153847,
+    "numReviews": 67,
+    "topCriticScore": 89.60526315789474,
+    "tier": "Mighty",
+    "name": "Hollow Knight",
+    "id": 4002,
+    "firstReleaseDate": "2017-02-24T00:00:00.000Z",
+    "url": "https://opencritic.com/game/4002/hollow-knight"
+  },
+  {
+    "percentRecommended": 96.80851063829788,
+    "numReviews": 99,
+    "topCriticScore": 89.5657894736842,
+    "tier": "Mighty",
+    "name": "Tetris Effect",
+    "id": 6863,
+    "firstReleaseDate": "2018-11-09T00:00:00.000Z",
+    "url": "https://opencritic.com/game/6863/tetris-effect"
+  },
+  {
+    "percentRecommended": 100,
+    "numReviews": 11,
+    "topCriticScore": 89.5,
+    "tier": "Mighty",
+    "name": "Mark of the Ninja: Remastered",
+    "id": 6731,
+    "firstReleaseDate": "2018-10-09T00:00:00.000Z",
+    "url": "https://opencritic.com/game/6731/mark-of-the-ninja-remastered"
+  },
+  {
+    "percentRecommended": 98.55072463768117,
+    "numReviews": 70,
+    "topCriticScore": 89.4,
+    "tier": "Mighty",
+    "name": "Stardew Valley",
+    "id": 2242,
+    "firstReleaseDate": "2016-02-26T00:00:00.000Z",
+    "url": "https://opencritic.com/game/2242/stardew-valley"
+  },
+  {
+    "percentRecommended": 96.07843137254902,
+    "numReviews": 55,
+    "topCriticScore": 89.38235294117646,
+    "tier": "Mighty",
+    "name": "Return of the Obra Dinn",
+    "id": 1726,
+    "firstReleaseDate": "2018-10-18T00:00:00.000Z",
+    "url": "https://opencritic.com/game/1726/return-of-the-obra-dinn"
+  },
+  {
+    "percentRecommended": 93.87755102040816,
+    "numReviews": 51,
+    "topCriticScore": 89.38095238095238,
+    "tier": "Mighty",
+    "name": "Final Fantasy XIV: Shadowbringers",
+    "id": 7836,
+    "firstReleaseDate": "2019-07-02T00:00:00.000Z",
+    "url": "https://opencritic.com/game/7836/final-fantasy-xiv-shadowbringers"
+  },
+  {
+    "percentRecommended": 92.76315789473685,
+    "numReviews": 157,
+    "topCriticScore": 89.36206896551724,
+    "tier": "Mighty",
+    "name": "Nier: Automata",
+    "id": 3540,
+    "firstReleaseDate": "2017-03-07T00:00:00.000Z",
+    "url": "https://opencritic.com/game/3540/nier-automata"
+  },
+  {
+    "percentRecommended": 96.15384615384616,
+    "numReviews": 187,
+    "topCriticScore": 89.61267605633803,
+    "tier": "Mighty",
+    "name": "Monster Hunter World",
+    "id": 4903,
+    "firstReleaseDate": "2018-01-26T00:00:00.000Z",
+    "url": "https://opencritic.com/game/4903/monster-hunter-world"
+  },
+  {
+    "percentRecommended": 98.46153846153847,
+    "numReviews": 67,
+    "topCriticScore": 89.60526315789474,
+    "tier": "Mighty",
+    "name": "Hollow Knight",
+    "id": 4002,
+    "firstReleaseDate": "2017-02-24T00:00:00.000Z",
+    "url": "https://opencritic.com/game/4002/hollow-knight"
+  },
+  {
+    "percentRecommended": 96.80851063829788,
+    "numReviews": 99,
+    "topCriticScore": 89.5657894736842,
+    "tier": "Mighty",
+    "name": "Tetris Effect",
+    "id": 6863,
+    "firstReleaseDate": "2018-11-09T00:00:00.000Z",
+    "url": "https://opencritic.com/game/6863/tetris-effect"
+  },
+  {
+    "percentRecommended": 100,
+    "numReviews": 11,
+    "topCriticScore": 89.5,
+    "tier": "Mighty",
+    "name": "Mark of the Ninja: Remastered",
+    "id": 6731,
+    "firstReleaseDate": "2018-10-09T00:00:00.000Z",
+    "url": "https://opencritic.com/game/6731/mark-of-the-ninja-remastered"
+  },
+  {
+    "percentRecommended": 86.66666666666667,
+    "numReviews": 15,
+    "topCriticScore": 89.44444444444444,
+    "tier": "Mighty",
+    "name": "The House in Fata Morgana",
+    "id": 2847,
+    "firstReleaseDate": "2016-05-13T00:00:00.000Z",
+    "url": "https://opencritic.com/game/2847/the-house-in-fata-morgana"
+  },
+  {
+    "percentRecommended": 98.55072463768117,
+    "numReviews": 70,
+    "topCriticScore": 89.4,
+    "tier": "Mighty",
+    "name": "Stardew Valley",
+    "id": 2242,
+    "firstReleaseDate": "2016-02-26T00:00:00.000Z",
+    "url": "https://opencritic.com/game/2242/stardew-valley"
+  },
+  {
+    "percentRecommended": 100,
+    "numReviews": 7,
+    "topCriticScore": 89.4,
+    "tier": "Mighty",
+    "name": "Paradigm",
+    "id": 4173,
+    "firstReleaseDate": "2017-04-05T00:00:00.000Z",
+    "url": "https://opencritic.com/game/4173/paradigm"
+  },
+  {
+    "percentRecommended": 96.07843137254902,
+    "numReviews": 55,
+    "topCriticScore": 89.38235294117646,
+    "tier": "Mighty",
+    "name": "Return of the Obra Dinn",
+    "id": 1726,
+    "firstReleaseDate": "2018-10-18T00:00:00.000Z",
+    "url": "https://opencritic.com/game/1726/return-of-the-obra-dinn"
+  },
+  {
+    "percentRecommended": 93.87755102040816,
+    "numReviews": 51,
+    "topCriticScore": 89.38095238095238,
+    "tier": "Mighty",
+    "name": "Final Fantasy XIV: Shadowbringers",
+    "id": 7836,
+    "firstReleaseDate": "2019-07-02T00:00:00.000Z",
+    "url": "https://opencritic.com/game/7836/final-fantasy-xiv-shadowbringers"
+  },
+  {
+    "percentRecommended": 92.76315789473685,
+    "numReviews": 157,
+    "topCriticScore": 89.36206896551724,
+    "tier": "Mighty",
+    "name": "Nier: Automata",
+    "id": 3540,
+    "firstReleaseDate": "2017-03-07T00:00:00.000Z",
+    "url": "https://opencritic.com/game/3540/nier-automata"
+  },
+  {
+    "percentRecommended": 100,
+    "numReviews": 53,
+    "topCriticScore": 89.3529411764706,
+    "tier": "Mighty",
+    "name": "Slay The Spire",
+    "id": 7207,
+    "firstReleaseDate": "2019-01-23T00:00:00.000Z",
+    "url": "https://opencritic.com/game/7207/slay-the-spire"
+  },
+  {
+    "percentRecommended": 96.07843137254902,
+    "numReviews": 51,
+    "topCriticScore": 89.33823529411765,
+    "tier": "Mighty",
+    "name": "Chained Echoes",
+    "id": 14102,
+    "firstReleaseDate": "2022-12-08T00:00:00.000Z",
+    "url": "https://opencritic.com/game/14102/chained-echoes"
+  },
+  {
+    "percentRecommended": 60,
+    "numReviews": 5,
+    "topCriticScore": 89.33333333333333,
+    "tier": "Mighty",
+    "name": "Path of the Midnight Sun",
+    "id": 14188,
+    "firstReleaseDate": "2023-01-10T00:00:00.000Z",
+    "url": "https://opencritic.com/game/14188/path-of-the-midnight-sun"
+  },
+  {
+    "percentRecommended": 93.25842696629213,
+    "numReviews": 94,
+    "topCriticScore": 89.30985915492958,
+    "tier": "Mighty",
+    "name": "Sid Meier's Civilization VI",
+    "id": 2719,
+    "firstReleaseDate": "2016-10-21T00:00:00.000Z",
+    "url": "https://opencritic.com/game/2719/sid-meiers-civilization-vi"
+  },
+  {
+    "percentRecommended": 95.95959595959596,
+    "numReviews": 203,
+    "topCriticScore": 89.25,
+    "tier": "Mighty",
+    "name": "DOOM Eternal",
+    "id": 7410,
+    "firstReleaseDate": "2020-03-20T00:00:00.000Z",
+    "url": "https://opencritic.com/game/7410/doom-eternal"
+  },
+  {
+    "percentRecommended": 94.28571428571428,
+    "numReviews": 72,
+    "topCriticScore": 89.23529411764706,
+    "tier": "Mighty",
+    "name": "Disco Elysium: The Final Cut",
+    "id": 11148,
+    "firstReleaseDate": "2021-01-01T00:00:00.000Z",
+    "url": "https://opencritic.com/game/11148/disco-elysium-the-final-cut"
+  },
+  {
+    "percentRecommended": 98.18181818181819,
+    "numReviews": 61,
+    "topCriticScore": 89.21153846153847,
+    "tier": "Mighty",
+    "name": "The Witcher 3: Wild Hunt - Hearts of Stone",
+    "id": 1827,
+    "firstReleaseDate": "2015-10-12T00:00:00.000Z",
+    "url": "https://opencritic.com/game/1827/the-witcher-3-wild-hunt-hearts-of-stone"
+  },
+  {
+    "percentRecommended": 97.01492537313433,
+    "numReviews": 69,
+    "topCriticScore": 89.1639344262295,
+    "tier": "Mighty",
+    "name": "Pillars of Eternity",
+    "id": 496,
+    "firstReleaseDate": "2015-03-26T00:00:00.000Z",
+    "url": "https://opencritic.com/game/496/pillars-of-eternity"
+  },
+  {
+    "percentRecommended": 100,
+    "numReviews": 41,
+    "topCriticScore": 89.16,
+    "tier": "Mighty",
+    "name": "DUSK",
+    "id": 4927,
+    "firstReleaseDate": "2017-10-31T00:00:00.000Z",
+    "url": "https://opencritic.com/game/4927/dusk"
+  },
+  {
+    "percentRecommended": 100,
+    "numReviews": 10,
+    "topCriticScore": 89.14285714285714,
+    "tier": "Mighty",
+    "name": "Kentucky Route Zero",
+    "id": 3014,
+    "firstReleaseDate": "2016-07-20T00:00:00.000Z",
+    "url": "https://opencritic.com/game/3014/kentucky-route-zero"
   }
 ]
