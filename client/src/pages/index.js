@@ -1,41 +1,36 @@
 import GameList from "@/components/GameList";
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
-import Head from "next/head";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
+
 import { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 
 import axiosInstance from "@/helpers/axiosInstance";
-import { getFav } from "@/helpers/manageFavorites";
+import { getFavoriteGames } from "@/helpers/manageFavorites";
 import Link from "next/link";
-
-
+import Sidebar from "@/components/SideBar";
 
 export default function Home() {
   const [query, setQuery] = useState("");
   const [games, setGames] = useState([]);
   const [_, setfavourites] = useState([]);
   const [loading, setLoading] = useState(true);
- 
+
   useEffect(() => {
-   
     const getGames = async (q) => {
       try {
         const { data } = await axiosInstance.get(q);
-        if (data) {
-          setGames(data);
-          setLoading(false);
-        }
+        setGames(data || []);
       } catch (error) {
-        setLoading(false);
+        setGames([]);
       }
       setLoading(false);
     };
-    let q = "/game";
+    let q = "/all-games";
     if (query.trim().length) {
       q = "game?q=" + query;
     }
     getGames(q);
-    setfavourites(getFav());
+    setfavourites(getFavoriteGames());
   }, [query]);
   if (loading)
     return (
@@ -46,16 +41,11 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>GAMES APP</title>
-        <meta name="description" content="GAMES APP" />
-      </Head>
-
       <Box m={10}>
         <SearchBar setQuery={setQuery} />
 
         <Link href={`/favorites`}>
-          <Button colorScheme="blue" mt="6" size="xs" >
+          <Button colorScheme="blue" mt="6" size="xs">
             Show favourites
           </Button>
         </Link>
@@ -77,59 +67,3 @@ export default function Home() {
     </>
   );
 }
-const Sidebar = () => {
-  const [topGames, setTopames] = useState([]);
-
-  useEffect(() => {
-    const getGames = async (q) => {
-      try {
-        const { data } = await axiosInstance.get("/games-top");
-        if (data) {
-          setTopames(data);
-        }
-      } catch (error) {}
-    };
-    getGames();
-  }, []);
-  return (
-    <Box ml={{ md: "auto" }} w={{ base: "100%", lg: "30%" }}>
-      <Text textAlign={"center"} m="2" fontSize={"3xl"} fontWeight={"bold"}>
-        Top 10
-      </Text>
-
-      <Flex
-        overflowX={{ base: "scroll", md: "hidden" }}
-        direction={{ base: "row", md: "column" }}
-        gap="2"
-        spacing={4}
-        align="flex-start"
-      >
-        {topGames.map((game) => (
-          <Box
-            key={game.id}
-            boxShadow={"sm"}
-            textAlign={{ md: "left", base: "center" }}
-            p={2}
-            h="100%"
-          >
-            <Link href={`/game/${game.id}`}>
-              <Heading as="h2" size="sm" mb={2}>
-                {game.name}
-              </Heading>
-            </Link>
-            <Text mb={1} fontSize={"small"}>
-              Percent Recommended: {game.percentRecommended}%
-            </Text>
-            <Text mb={1} fontSize={"small"}>
-              Number of Reviews: {game.numReviews}
-            </Text>
-            <Text mb={1} fontSize={"small"}>
-              Top Critic Score: {game.topCriticScore}
-            </Text>
-            <Text>Tier: {game.tier}</Text>
-          </Box>
-        ))}
-      </Flex>
-    </Box>
-  );
-};

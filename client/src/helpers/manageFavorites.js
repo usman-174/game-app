@@ -1,30 +1,58 @@
-const addFav = (game) => {
-  if (game) {
-    const data = JSON.parse(localStorage.getItem("favs")) || [];
+const addGameToFavorites = (game) => {
+  try {
+    if (!game) return;
 
-    if (!existFav(game)) {
-      data.push(game);
-      localStorage.setItem("favs", JSON.stringify(data));
+    const favorites = getFavoriteGames();
+    if (!isGameInFavorites(game)) {
+      favorites.push(game);
+      localStorage.setItem("favoriteGames", JSON.stringify(favorites));
     }
+  } catch (error) {
+    console.error("Error adding game to favorites:", error);
   }
 };
-const removeFav = (game) => {
-  if (game) {
-    let data = JSON.parse(localStorage.getItem("favs"));
-    if (existFav(game)) {
-      data = data.filter((gamex) => gamex.id !== game.id);
-      localStorage.setItem("favs", JSON.stringify(data));
+
+const removeGameFromFavorites = (game) => {
+  try {
+    if (!game) return;
+
+    const favorites = getFavoriteGames();
+    if (isGameInFavorites(game)) {
+      const updatedFavorites = favorites.filter(
+        (favGame) => favGame.id !== game.id
+      );
+      localStorage.setItem("favoriteGames", JSON.stringify(updatedFavorites));
     }
+  } catch (error) {
+    console.error("Error removing game from favorites:", error);
   }
 };
-const getFav = () => {
-  return JSON.parse(localStorage.getItem("favs"));
-};
-const existFav = (game) => {
-  const favs = localStorage.getItem("favs");
-  if (favs && favs.length > 0) {
-    return JSON.parse(favs).find((x) => x.id == game.id);
+
+const getFavoriteGames = () => {
+  try {
+    const favorites = JSON.parse(localStorage.getItem("favoriteGames")) || [];
+    console.log(favorites);
+    return favorites;
+  } catch (error) {
+    console.error("Error getting favorite games:", error);
+    return [];
   }
-  return null;
-}
-export { getFav, removeFav, addFav ,existFav};
+};
+
+const isGameInFavorites = (game) => {
+  try {
+    const favorites = getFavoriteGames();
+    const found = favorites.some((favGame) => favGame.id === game.id);
+  console.log(found)
+  return found
+  } catch (error) {
+    console.error("Error checking if game is in favorites:", error);
+    return false;
+  }
+};
+export {
+  getFavoriteGames,
+  removeGameFromFavorites,
+  addGameToFavorites,
+  isGameInFavorites,
+};

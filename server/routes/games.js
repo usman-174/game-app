@@ -1,10 +1,11 @@
 const { Router } = require("express");
 const { PrismaClient } = require("@prisma/client");
+const Joi = require("joi");
 
 const games = Router();
 const prisma = new PrismaClient();
 
-games.get("/games", async (_, res) => {
+games.get("/all-games", async (_, res) => {
   try {
     const games = await prisma.game.findMany(); // Find all games in the database
 
@@ -14,49 +15,62 @@ games.get("/games", async (_, res) => {
   }
 });
 
-games.get("/games/:id", async (req, res) => {
+// Get game by ID
+games.get("/game/:id", async (req, res) => {
+  // Parse game ID from request params
   const gameId = parseInt(req.params.id);
+
+  // Check if the game ID is valid
   if (isNaN(gameId)) {
     return res.status(400).json({ message: "Invalid game ID" });
   }
+
+  // Query the database for the game with the specified ID
   try {
     const game = await prisma.game.findUnique({
       where: {
         id: gameId,
       },
     });
+
+    // If no game was found with the specified ID, return a 404 error
     if (!game) {
       return res.status(404).json({ message: "Game not found" });
     }
+
+    // Otherwise, return the game as the response
     return res.json(game);
   } catch (err) {
+    // If there was an error while querying the database, return a 500 error
     console.error(err);
     res.status(500).json({ message: "Internal server error" });
   }
 });
-games.get("/game", async (req, res) => {
+// Route to search games by name
+games.get("/games", async (req, res) => {
+  // Get the value of the "q" query parameter
   const name = req.query.q;
-
   try {
+    // Query the database for games that match the search criteria
     const games = await prisma.game.findMany({
       where: {
+        // Search for games whose name contains the search query (case-insensitive)
         name: {
           contains: name,
           mode: "insensitive",
         },
       },
     });
-    // important: Its okay to send empty Array
-    
-    res.json(games);
+
+    // Send the search results as the response
+    res.status(200).json(games);
   } catch (err) {
-    console.error(err);
     res.status(500).json({ message: "Game not found" });
   }
 });
-
 games.get("/games-top", async (req, res) => {
   try {
+    // Finding Games by Recommendation
     const games = await prisma.game.findMany({
       orderBy: {
         percentRecommended: "desc",
@@ -71,7 +85,26 @@ games.get("/games-top", async (req, res) => {
     res.status(500).json({ error: "Game not found" });
   }
 });
-games.post("/games", async (req, res) => {
+games.post("/add-game", async (req, res) => {
+  //In put validation
+  const schema = Joi.object({
+    percentRecommended: Joi.number().min(0).max(100).required(),
+    numReviews: Joi.number().min(0).required(),
+    topCriticScore: Joi.number().min(0).max(100).required(),
+    tier: Joi.string().required(),
+    name: Joi.string().required(),
+    firstReleaseDate: Joi.date().required(),
+    url: Joi.string().required(),
+  });
+  // Validate the input
+  const { error } = schema.validate(req.body);
+  if (error) {
+    // Return a 400 Bad Request response with the validation error message
+    return res
+      .status(400)
+      .json({ error: error.details[0].message.replace(/["\\]/g, "") });
+  }
+
   // Create the game in the database using Prisma
   try {
     const game = await prisma.game.create({
@@ -95,24 +128,24 @@ games.post("/games", async (req, res) => {
 });
 
 // PUT /games/:id
-games.put("/games/:id", async (req, res) => {
+games.put("/update-game/:id", async (req, res) => {
   const gameId = parseInt(req.params.id);
 
   // Update the game in the database using Prisma
   try {
+    // Build the update object based on non-empty fields in the req.body
+    const updateObject = {};
+    for (const key in req.body) {
+      if (req.body[key]) {
+        updateObject[key] = req.body[key];
+      }
+    }
+
     const updatedGame = await prisma.game.update({
       where: {
         id: gameId,
       },
-      data: {
-        percentRecommended: req.body.percentRecommended,
-        numReviews: req.body.numReviews,
-        topCriticScore: req.body.topCriticScore,
-        tier: req.body.tier,
-        name: req.body.name,
-        firstReleaseDate: req.body.firstReleaseDate,
-        url: req.body.url,
-      },
+      data: updateObject,
     });
 
     // Return the updated game as the response
@@ -151,13 +184,13 @@ exports.games = games;
  *        name:
  *          type: string
  *          example: "The Stanley Parable: Ultra Deluxe"
- *      firstReleaseDate:
- *        type: string
- *        format: date-time
- *        example: "2022-04-27T00:00:00.000Z"
- *      url:
- *        type: string
- *        example: "https://opencritic.com/game/13083/the-stanley-parable-ultra-deluxe"
+ *        firstReleaseDate:
+ *           type: integer
+ *           description: The date the game was first released.
+ *           example: 2016
+ *        url:
+ *          type: string
+ *          example: "https://opencritic.com/game/13083/the-stanley-parable-ultra-deluxe"
  *    required:
  *      - id
  *      - percentRecommended
@@ -171,7 +204,7 @@ exports.games = games;
  *
  *
  * paths:
- *  /games:
+ *  /api/all-games:
  *   get:
  *     summary: Retrieve all games.
  *     description: Get all games from database
@@ -196,7 +229,7 @@ exports.games = games;
  *                 message:
  *                   type: string
  *                   description: Error message.
- *  /games/{id}:
+ *  /api/game/{id}:
  *   get:
  *     summary: Get a game by ID
  *     description: Get a game from the database by its ID
@@ -218,7 +251,7 @@ exports.games = games;
  *               $ref: '#/components/schemas/Game'
  *       '500':
  *         description: Game not found
- *  /game:
+ *  /api/games:
  *    get:
  *      summary: Get games by name
  *      description: Get a list of games by name from the database
@@ -267,7 +300,7 @@ exports.games = games;
  *                 error:
  *                   type: string
  *
- *  /api/games:
+ *  /api/add-game:
  *   post:
  *     summary: Create a new game
  *     tags:
@@ -296,7 +329,7 @@ exports.games = games;
  *                 error:
  *                   type: string
  *
- *  /api/games/{id}:
+ *  /api/update-game/{id}:
  *    put:
  *     summary: Update a game by ID
  *     description: Update a game in the database using its ID

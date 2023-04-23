@@ -12,9 +12,8 @@ const GameList = ({ games, setfavourites }) => {
       }}
       gap={6}
       mt={6}
-      
     >
-      { games?.map((game) => (
+      {games?.map((game) => (
         <GridItem key={game.id}>
           <Box
             border="1px"
@@ -35,7 +34,7 @@ const GameList = ({ games, setfavourites }) => {
             <ShowFavButton game={game} setfavourites={setfavourites} />
           </Box>
         </GridItem>
-      )) }
+      ))}
     </Grid>
   );
 };

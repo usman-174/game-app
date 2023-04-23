@@ -1,5 +1,5 @@
 import GameList from "@/components/GameList";
-import { getFav } from "@/helpers/manageFavorites";
+import { getFavoriteGames } from "@/helpers/manageFavorites";
 
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { Box, Button, Text } from "@chakra-ui/react";
@@ -10,11 +10,10 @@ const favorites = () => {
   const [favourites, setfavourites] = useState([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
- 
+
   useEffect(() => {
-    setfavourites(getFav());
+    setfavourites(getFavoriteGames());
     setLoading(false);
-   
   }, []);
   if (loading)
     return (

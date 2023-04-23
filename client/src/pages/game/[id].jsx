@@ -1,19 +1,32 @@
 import axiosInstance from "@/helpers/axiosInstance";
-import { addFav, existFav, removeFav } from "@/helpers/manageFavorites";
+import {
+  addGameToFavorites,
+  isGameInFavorites,
+  removeGameFromFavorites,
+} from "@/helpers/manageFavorites";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useCallback ,useState,useEffect} from "react";
+
 
 const Game = ({ game }) => {
   const router = useRouter();
-  const [exist, setexist] = useState(false);
-  
-  useEffect(() => {
-    setexist(existFav(game))
+  const [exist, setexist] = useState(() => isGameInFavorites(game));
 
-  }, []);
+  const handleRemoveFromFavorites = useCallback(() => {
+    removeGameFromFavorites(game);
+    setexist(isGameInFavorites(game));
+  }, [game]);
+
+  const handleAddToFavorites = useCallback(() => {
+    addGameToFavorites(game);
+    setexist(isGameInFavorites(game));
+  }, [game]);
+
+  useEffect(() => {
+    setexist(isGameInFavorites(game));
+  }, [game]);
   return (
     <div>
       {" "}
@@ -21,9 +34,7 @@ const Game = ({ game }) => {
         <Button
           leftIcon={<ArrowBackIcon />}
           size="sm"
-          onClick={() => {
-            router.back();
-          }}
+          onClick={router.back}
         ></Button>
         {game ? (
           <Box
@@ -77,10 +88,7 @@ const Game = ({ game }) => {
               <br />
               {exist ? (
                 <Button
-                  onClick={() => {
-                    removeFav(game); setexist(existFav(game))
-                  
-                  }}
+                  onClick={handleRemoveFromFavorites}
                   mt={2}
                   size="xs"
                   colorScheme="red"
@@ -89,10 +97,7 @@ const Game = ({ game }) => {
                 </Button>
               ) : (
                 <Button
-                  onClick={() => {
-                    addFav(game); setexist(existFav(game))
-                    
-                  }}
+                  onClick={handleAddToFavorites}
                   mt={2}
                   size="xs"
                   colorScheme="blue"
@@ -103,7 +108,7 @@ const Game = ({ game }) => {
             </Box>
           </Box>
         ) : (
-          <h1>Not FOUND</h1>
+          <h1>GAME Not FOUND</h1>
         )}
       </Box>
     </div>
@@ -114,9 +119,15 @@ export default Game;
 
 export async function getServerSideProps(context) {
   const { id } = context.query;
-  const response = await axiosInstance.get(`/games/${id}`);
-  const game = response.data;
-  return {
-    props: { game },
-  };
+  try {
+    const response = await axiosInstance.get(`/game/${id}`);
+    const game = response.data;
+    return {
+      props: { game },
+    };
+  } catch (error) {
+    return {
+      props: { game: null },
+    };
+  }
 }

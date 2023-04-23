@@ -1,9 +1,9 @@
-const dotenv = require('dotenv');
-const express = require('express');
-const cors = require('cors');
-const swaggerUi = require('swagger-ui-express');
-const swaggerJSDoc = require('swagger-jsdoc');
-const { games: gamesRouter } = require('./routes/games.js');
+const dotenv = require("dotenv");
+const express = require("express");
+const cors = require("cors");
+const swaggerUi = require("swagger-ui-express");
+const swaggerJSDoc = require("swagger-jsdoc");
+const { games: gamesRouter } = require("./routes/games.js");
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();
 }
@@ -19,6 +19,7 @@ const swaggerOptions = {
       description:
         "This API provides endpoints for managing games in a database. The /games endpoint retrieves a list of all games, while the /games/{id} endpoint retrieves a specific game by ID. The /game endpoint allows for searching games by name, while /api/games-top retrieves the top 10 games by recommendation percentage. The /api/games endpoint creates a new game in the database, while the /api/games/{id} endpoint updates an existing game. The API is built using Swagger and follows the OpenAPI specification. The Game schema defines the structure of a game object, including properties such as ID, recommendation percentage, number of reviews, top critic score, tier, name, first release date, and URL. The API returns responses in JSON format and provides error messages for invalid requests.",
     },
+  
   },
   apis: ["./routes/*.js"],
 };
@@ -43,7 +44,7 @@ app.get("/", (_, res) => {
   });
 });
 
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use("/api/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use("/api", gamesRouter);
 
 app.use((_, res) => {
@@ -52,9 +53,6 @@ app.use((_, res) => {
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
-
- 
-  
 });
 
 process.on("uncaughtException", (err) => {
@@ -67,4 +65,4 @@ process.on("unhandledRejection", (err) => {
   process.exit(1);
 });
 
-exports.app = app
+exports.app = app;

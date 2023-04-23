@@ -10,7 +10,7 @@ describe("GET /games", () => {
 
   it("should return a list of all games in the database", async () => {
     // Make a GET request to the /games route
-    const response = await request(app).get("/api/games");
+    const response = await request(app).get("/api/all-games");
 
     // Expect the status code to be 200
     expect(response.statusCode).toBe(200);
@@ -28,7 +28,7 @@ describe("GET /games", () => {
   });
 });
 
-describe("GET /games/:id", () => {
+describe("GET /game/:id", () => {
   // afterEach(async () => {
   //   // Clean up the database after each test
   //   await prisma.game.deleteMany();
@@ -45,12 +45,11 @@ describe("GET /games/:id", () => {
         name: "Slay The Spire",
         firstReleaseDate: 2017,
         url: "https://opencritic.com/game/7207/slay-the-spire",
-        id: 7,
       },
     });
 
     // Make a GET request to the route for the created game
-    const response = await request(app).get(`/api/games/${createdGame.id}`);
+    const response = await request(app).get(`/api/game/${createdGame.id}`);
 
     // Expect the status code to be 200
     expect(response.statusCode).toBe(200);
@@ -62,7 +61,7 @@ describe("GET /games/:id", () => {
 
   it("should return an error if the ID is not an integer", async () => {
     // Make a GET request to the /games/:id route with a non-integer ID
-    const response = await request(app).get("/api/games/abc");
+    const response = await request(app).get("/api/game/abc");
 
     // Expect the status code to be 400
     expect(response.statusCode).toBe(400);
@@ -74,7 +73,7 @@ describe("GET /games/:id", () => {
 
   it("should return an error if the game is not found", async () => {
     // Make a GET request to the /games/:id route with a non-existent ID
-    const response = await request(app).get("/api/games/9999");
+    const response = await request(app).get("/api/game/9999");
 
     // Expect the status code to be 500
     expect(response.statusCode).toBe(404);
@@ -89,7 +88,7 @@ describe("GET /games/:id", () => {
     jest.spyOn(prisma.game, "findMany").mockResolvedValue([]);
 
     // Make a GET request to the /game route with a search query
-    const response = await request(app).get("/api/game?q=Game");
+    const response = await request(app).get("/api/games?q=xxxx");
 
     // Expect the status code to be 200
     expect(response.statusCode).toBe(200);
@@ -112,7 +111,7 @@ describe("POST /games", () => {
     };
 
     // Make a POST request to the /games route with the new game data
-    const response = await request(app).post("/api/games").send(newGame);
+    const response = await request(app).post("/api/add-game").send(newGame);
 
     // Expect the status code to be 200
     expect(response.statusCode).toBe(200);
