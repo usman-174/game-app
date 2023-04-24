@@ -2,15 +2,26 @@ import { Box, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 
 import { Link } from "@chakra-ui/next-js";
 import ShowFavButton from "./ShowFavButton";
-import { Game } from "@/types/Game";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, FunctionComponent, SetStateAction } from "react";
+export interface Game {
+  id: number;
+  percentRecommended: number;
+  numReviews: number;
+  topCriticScore: number;
+  tier: string;
+  name: string;
+  url: string;
+  firstReleaseDate: number;
+}
+
+
 type Props = {
-  games: Game[]
-  setfavourites: Dispatch<SetStateAction<Game[]>>
+  games?: Game[]
+  setfavourites?: Dispatch<SetStateAction<Game[]>>
 
-  }
+}
 
-const GameList = ({ games, setfavourites }: Props) => {
+const GameList: FunctionComponent<Props> = ({ games, setfavourites }) => {
   return (
     <Grid
       templateColumns={{
@@ -19,7 +30,7 @@ const GameList = ({ games, setfavourites }: Props) => {
         xl: "repeat(3, 1fr)",
       }}
       gap={6}
-      mt={6} 
+      mt={6}
     >
       {games?.map((game) => (
         <GridItem key={game.id}>
@@ -39,7 +50,7 @@ const GameList = ({ games, setfavourites }: Props) => {
             <Text mb={2}>Number of Reviews: {game.numReviews}</Text>
             <Text mb={2}>Top Critic Score: {game.topCriticScore}</Text>
             <Text>Tier: {game.tier}</Text>
-            <ShowFavButton game={game} setfavourites={setfavourites} />
+            <ShowFavButton game={game} setfavourites={setfavourites!} />
           </Box>
         </GridItem>
       ))}
