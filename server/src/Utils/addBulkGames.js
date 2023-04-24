@@ -1,21 +1,11 @@
-interface Game {
-  
-  percentRecommended: number;
-  numReviews: number;
-  topCriticScore: number;
-  tier: string;
-  name: string;
-  firstReleaseDate: number;
-  url: string;
-}
 
-
-import data from "../data.json";
-import {prisma }from "../../prisma/index"
+const data =require("../data.json");
+const { PrismaClient } =require( '@prisma/client')
+const prisma = new PrismaClient()
 
 async function addGamesToModel(gameDataArray) {
   try {
-    const gamePromises = gameDataArray.map((gameData : Game) => {
+    const gamePromises = gameDataArray.map((gameData) => {
       return prisma.game.create({
         data: {
           percentRecommended: Math.ceil(parseInt(gameData.percentRecommended.toFixed(2))),

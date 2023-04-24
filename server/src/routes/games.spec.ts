@@ -2,7 +2,7 @@
 
 import request from "supertest";
 import { app } from "../app";
-import { prisma } from "../prisma/index"; 
+import { prisma } from "../../prisma/index"; 
 
 describe("GET /games", () => { 
   afterAll(async () => {

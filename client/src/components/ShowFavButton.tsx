@@ -19,21 +19,22 @@ type Props = {
 }
 
 const ShowFavButton = ({ game, setfavourites }: Props) => {
-  const [exists, setExists] = useState<boolean>(isGameInFavorites(game));
+  const [exists, setExists] = useState<boolean>(isGameInFavorites(game)!);
 
   const handleAddToFav = () => {
     addGameToFavorites(game);
-    setfavourites(getFavoriteGames());
+    setfavourites(getFavoriteGames()!);
     setExists(true);
   };
 
   const handleRemoveFromFav = () => {
     removeGameFromFavorites(game);
-    setfavourites(getFavoriteGames());
+    setfavourites(getFavoriteGames()!);
     setExists(false);
   };
   useEffect(() => {
-    setExists(isGameInFavorites(game));
+    setExists(isGameInFavorites(game)!);
+    //eslint-disable-next-line
   }, []);
 
   return (

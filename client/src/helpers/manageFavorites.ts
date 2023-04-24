@@ -1,12 +1,13 @@
 import { Game } from "@/types/Game";
-
+const isClient = typeof window !== 'undefined';
 const addGameToFavorites = (game : Game) :void => {
+  if(!isClient) return
   try {
     if (!game) return;
 
     const favorites = getFavoriteGames();
     if (!isGameInFavorites(game)) {
-      favorites.push(game);
+      favorites?.push(game);
       localStorage.setItem("favoriteGames", JSON.stringify(favorites));
     }
   } catch (error) {
@@ -15,12 +16,13 @@ const addGameToFavorites = (game : Game) :void => {
 };
 
 const removeGameFromFavorites = (game : Game) :void => {
+  if(!isClient) return
   try {
     if (!game) return;
 
     const favorites = getFavoriteGames();
     if (isGameInFavorites(game)) {
-      const updatedFavorites = favorites .filter(
+      const updatedFavorites = favorites?.filter(
         (favGame ) => favGame.id !== game.id
       );
       localStorage.setItem("favoriteGames", JSON.stringify(updatedFavorites));
@@ -30,10 +32,11 @@ const removeGameFromFavorites = (game : Game) :void => {
   }
 };
 
-const getFavoriteGames = (): Game[]  => {
+const getFavoriteGames = (): Game[]|null  => {
+  if(!isClient) return null;
   try {
     const favorites = JSON.parse(localStorage.getItem("favoriteGames") || "[]") || [];
-    console.log(favorites);
+  
     return favorites;
   } catch (error) {
     console.error("Error getting favorite games:", error);
@@ -41,12 +44,13 @@ const getFavoriteGames = (): Game[]  => {
   }
 };
 
-const isGameInFavorites = (game : Game) : boolean => {
+const isGameInFavorites = (game : Game) : boolean|null => {
+  if(!isClient) return null;
   try {
     const favorites = getFavoriteGames();
-    const found = favorites.some((favGame) => favGame.id === game.id);
+    const found = favorites?.some((favGame) => favGame.id === game.id);
  
-  return found
+  return found!
   } catch (error) {
     console.error("Error checking if game is in favorites:", error);
     return false;

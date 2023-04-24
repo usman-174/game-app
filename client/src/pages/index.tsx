@@ -1,22 +1,22 @@
 import GameList from "@/components/GameList";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
-
+import type { NextPage } from 'next';
 import { useEffect, useState } from "react";
-import SearchBar from "../components/SearchBar";
 
-import Sidebar from "@/components/SideBar";
+import Link from "next/link";
 import axiosInstance from "@/helpers/axiosInstance";
 import { getFavoriteGames } from "@/helpers/manageFavorites";
-import Link from "next/link";
-
-export default function Home() {
-  const [query, setQuery] = useState("");
+import Sidebar from "@/components/SideBar";
+import SearchBar from "@/components/searchBar";
+import {Game} from "@/types/Game"
+const  Home:NextPage = ()=>  {
+  const [query, setQuery] = useState<string>("");
   const [games, setGames] = useState([]);
-  const [_, setfavourites] = useState([]);
+  const [_, setfavourites] = useState<Game[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const getGames = async (q) => {
+    const getGames = async (q : string) => {
       try {
         const { data } = await axiosInstance.get(q);
         setGames(data || []);
@@ -30,7 +30,7 @@ export default function Home() {
       q = "games?q=" + query;
     }
     getGames(q);
-    setfavourites(getFavoriteGames());
+    setfavourites(getFavoriteGames()!);
   }, [query]);
   if (loading)
     return (
@@ -45,11 +45,11 @@ export default function Home() {
       <Box m={10}>
         <SearchBar setQuery={setQuery} />
 
-        <Link href={`/favorites`}>
           <Button colorScheme="blue" mt="6" size="xs">
+        <Link href={`/favorites`}>
             Show favourites
-          </Button>
         </Link>
+          </Button>
         <Flex w="100%" direction={{ base: "column-reverse", md: "row" }}>
           {games.length ? (
             <Box w={{ base: "100%", lg: "70%" }} px={{ base: 2, lg: 8 }}>
@@ -68,3 +68,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home

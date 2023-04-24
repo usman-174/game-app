@@ -16,6 +16,7 @@ games.get("/all-games", async (_, res) => {
         return res.status(200).json(games);
     }
     catch (err) {
+        console.log("error=?", err.message);
         return res.status(500).json({ message: "Game not Available" });
     }
 });
@@ -121,7 +122,7 @@ games.post("/add-game", async (req, res) => {
         return res.json(game);
     }
     catch (error) {
-        console.error(error);
+        console.error("err=>", error);
         return res.status(500).json({ error: "Failed to create game" });
     }
 });

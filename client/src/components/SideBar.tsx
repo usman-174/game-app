@@ -1,7 +1,7 @@
 import axiosInstance from "@/helpers/axiosInstance";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { Link } from "@chakra-ui/next-js";
+import Link from "next/link";
 import { Game } from "@/types/Game";
 
 const Sidebar = (): JSX.Element | null => {
@@ -17,6 +17,7 @@ const Sidebar = (): JSX.Element | null => {
       }
     };
     getTopGames();
+    //eslint-disable-next-line
   }, []);
 
   if (!topGames.length) {
@@ -43,11 +44,11 @@ const Sidebar = (): JSX.Element | null => {
             p={2}
             h="100%"
           >
-            <Link href={`/game/${game.id}`}>
               <Heading as="h2" size="sm" mb={2}>
+            <Link href={`/game/${game.id}`}>
                 {game.name}
-              </Heading>
             </Link>
+              </Heading>
             <Text mb={1} fontSize="small">
               Percent Recommended: {game.percentRecommended}%
             </Text>

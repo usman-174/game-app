@@ -4,9 +4,9 @@ import {
   InputGroup,
   InputRightElement
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 type Props = {
-  setQuery : (x:string)=>{}
+  setQuery :  Dispatch<SetStateAction<string>>
 }
 function SearchBar({ setQuery }:Props) {
   const [search, setSearch] = useState<string>("");

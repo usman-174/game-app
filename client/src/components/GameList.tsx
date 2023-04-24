@@ -1,6 +1,6 @@
 import { Box, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 
-import { Link } from "@chakra-ui/next-js";
+import Link  from "next/link";
 import ShowFavButton from "./ShowFavButton";
 import { Dispatch, FunctionComponent, SetStateAction } from "react";
 export interface Game {
@@ -41,11 +41,11 @@ const GameList: FunctionComponent<Props> = ({ games, setfavourites }) => {
             p={4}
             h="100%"
           >
-            <Link href={`/game/${game.id}`}>
               <Heading as="h3" size="md" mb={2}>
+            <Link href={`/game/${game.id}`}>
                 {game.name}
-              </Heading>
             </Link>
+              </Heading>
             <Text mb={2}>Percent Recommended: {game.percentRecommended}%</Text>
             <Text mb={2}>Number of Reviews: {game.numReviews}</Text>
             <Text mb={2}>Top Critic Score: {game.topCriticScore}</Text>

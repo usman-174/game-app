@@ -4,13 +4,19 @@ import {
   isGameInFavorites,
   removeGameFromFavorites,
 } from "@/helpers/manageFavorites";
+import { Game } from "@/types/Game";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
+import { GetServerSidePropsContext, NextPage } from "next";
 import { useRouter } from "next/router";
 import { useCallback ,useState,useEffect} from "react";
 
+type Props = {
+  game: Game
+  
 
-const Game = ({ game }) => {
+}
+const Game :NextPage<Props>= ({ game }) => {
   const router = useRouter();
   const [exist, setexist] = useState(() => isGameInFavorites(game));
 
@@ -117,7 +123,7 @@ const Game = ({ game }) => {
 
 export default Game;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context : GetServerSidePropsContext) {
   const { id } = context.query;
   try {
     const response = await axiosInstance.get(`/game/${id}`);

@@ -32,5 +32,5 @@
     "exclude": ["node_modules", "build"],
     "include": [
       "./src/**/*.tsx",
-      "./src/**/*.ts"  ,"**/*.spec.ts", ]
+      "./src/**/*.ts"  ,"**/*.spec.ts", "src/Utils/addBulkGames.js", ]
   }

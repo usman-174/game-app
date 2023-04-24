@@ -4,16 +4,17 @@ import { Game } from "@/types/Game";
 
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { Box, Button, Text } from "@chakra-ui/react";
+import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-const favorites = () : JSX.Element => {
+const Favorites = () => {
   const [favourites, setfavourites] = useState<Game[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const router = useRouter();
 
   useEffect(() => {
-    setfavourites(getFavoriteGames());
+    setfavourites(getFavoriteGames()!);
     setLoading(false);
   }, []);
   if (loading)
@@ -45,4 +46,4 @@ const favorites = () : JSX.Element => {
   );
 };
 
-export default favorites;
+export default Favorites;

@@ -24,10 +24,12 @@ games.get("/all-games", async (_: Request, res: Response): Promise<Game[] | Res>
     const games = await prisma.game.findMany(); // Find all games in the database
 
     return res.status(200).json(games);
-  } catch (err) {
+  } catch (err :any) {
+    console.log("error=?",err.message );
+    
     return res.status(500).json({ message: "Game not Available" });
   }
-});
+}); 
 
 // Get game by ID
 games.get("/game/:id", async (req: Request, res: Response): Promise<Game | Res> => {
@@ -41,7 +43,7 @@ games.get("/game/:id", async (req: Request, res: Response): Promise<Game | Res> 
 
   // Query the database for the game with the specified ID
   try {
-    const game = await prisma.game.findUnique({
+    const game = await prisma.game.findUnique({ 
       where: {
         id: gameId,
       },
@@ -136,7 +138,7 @@ games.post("/add-game", async (req: Request, res: Response): Promise<Game | Res>
     // Return the created game as the response
     return res.json(game);
   } catch (error) {
-    console.error(error);
+    console.error("err=>",error);
     return res.status(500).json({ error: "Failed to create game" });
   }
 });

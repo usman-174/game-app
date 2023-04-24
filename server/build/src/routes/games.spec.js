@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const supertest_1 = __importDefault(require("supertest"));
 const app_1 = require("../app");
-const index_1 = require("../prisma/index");
+const index_1 = require("../../prisma/index");
 describe("GET /games", () => {
     afterAll(async () => {
         // Clean up the database after all tests have finished
