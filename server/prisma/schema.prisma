@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgres://postgres:nextDevnextdev@db.ctjxmxaylcdpoulctukb.supabase.co:6543/postgres?pgbouncer=true"
+  url      = env("DATABASE_URL")
 }
 model Game {
   id                 Int    @id @default(autoincrement())

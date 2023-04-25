@@ -8,6 +8,7 @@ const index_1 = require("../../prisma/index");
 async function addGamesToModel(gameDataArray) {
     try {
         const gamePromises = gameDataArray.map((gameData) => {
+            console.log("Adding Game with name =>", gameData.name);
             return index_1.prisma.game.create({
                 data: {
                     percentRecommended: Math.ceil(parseInt(gameData.percentRecommended.toFixed(2))),

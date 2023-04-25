@@ -8,7 +8,7 @@
     "dev": "nodemon build/src/app.js",
     "start": "tsc && node build/src/app.js",
     "dev2": "nodemon --exec ts-node src/app.ts",
-    "feed:data": "nodemone src/Utils/addBulkGames.ts",
+    "feed:data": "tsc && node build/src/Utils/addBulkGames.js",
     "test": "jest -c ./jest.unit.json"
   },
   "keywords": [],
